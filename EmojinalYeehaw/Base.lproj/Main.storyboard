@@ -24,7 +24,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="140"/>
                                 <state key="normal" title="🤩"/>
                                 <connections>
-                                    <action selector="showMessageWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="HGy-r8-xAU"/>
+                                    <action selector="starEmojiWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="izC-M7-sz9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jPE-8e-u4S">
