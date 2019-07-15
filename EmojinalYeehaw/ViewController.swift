@@ -11,19 +11,20 @@ import UIKit
 class ViewController: UIViewController {
     
     @IBAction func showMessage(sender: UIButton) {
+        
+        let emojis = ["🤠": "singer", "🤩": "actor"]
+        var customMessages = ["singer" : ["taylor swift", "camila cabello", "HAIM"], "actor" : ["taron egerton", "jodie comer", "meryl streep"]]
+     
         let selectedEmotion = sender.titleLabel?.text
-        let emojis = ["🤠": "yeehaw", "🤩": "star"]
-        let alertController = UIAlertController (title: "Yeehaw", message: "Cowboy", preferredStyle: UIAlertController.Style.alert)
+           var titletext = emojis[selectedEmotion!]!
+        let randomMessages =  customMessages[emojis[selectedEmotion!]!]!.shuffled()
+      let emoji =  randomMessages[0]
+        let alertController = UIAlertController (title: titletext, message: emoji, preferredStyle: UIAlertController.Style.alert)
+
         
         alertController.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
         present(alertController, animated: true, completion: nil)
         
-    }
-    @IBAction func starEmoji(sender: UIButton) {
-        let alertController = UIAlertController (title: "Celebrity", message: "alkdsjf", preferredStyle: UIAlertController.Style.alert)
-
-       alertController.addAction(UIAlertAction(title: "OKIE", style: UIAlertAction.Style.default, handler: nil))
-        present(alertController, animated: true, completion: nil)
     }
     override func viewDidLoad() {
         super.viewDidLoad()
